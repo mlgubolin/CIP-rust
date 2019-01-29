@@ -1,13 +1,25 @@
 mod cip_internal;
 use std::vec::Vec;
 
-pub struct grid_setup {
-    current_grid: grid_variables,
-    previous_grid: grid_variables,
-    next_grid: grid_variables,
+pub struct Grids {
+    current_grid: GridParameters,
+    previous_grid: GridParameters,
+    next_grid: GridParameters,
 }
 
-struct grid_variables {
+impl Grids {
+    fn set_current_grid(f: Vec<f64>, u: Vec<f64>, g: Vec<f64>, dx: f64, dt: f64) -> GridParameters {
+        return GridParameters {
+            f: f,
+            u: u,
+            g: g,
+            dx: dx,
+            dt: dt,
+        };
+    }
+}
+
+struct GridParameters {
     f: Vec<f64>,
     u: Vec<f64>,
     g: Vec<f64>,
@@ -16,7 +28,7 @@ struct grid_variables {
 }
 
 // Returns f^{n+1}_i
-pub fn cip_1d(grid_setup: grid_setup) -> Vec<f64> {
+pub fn cip_1d(Grids: Grids) -> Vec<f64> {
     return vec![0.1, 1.1];
 }
 

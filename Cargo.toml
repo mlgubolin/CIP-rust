@@ -1,5 +1,5 @@
 [package]
-name = "cip-rust"
+name = "cip_rust"
 version = "0.1.0"
 authors = ["mlgubolin"]
 edition = "2018"

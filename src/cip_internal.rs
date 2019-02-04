@@ -29,14 +29,20 @@ pub struct Grids {
 }
 
 impl Grids {
-    pub fn set_grid_parameters(
-        f: Vec<f64>,
-        u: Vec<f64>,
-        g: Vec<f64>,
-        dx: f64,
-        dt: f64,
-    ) -> GridParameters {
-        return GridParameters::new(f, u, g, dx, dt);
+    pub fn set_grids(
+        previous_previous: GridParameters,
+        previous: GridParameters,
+        current: GridParameters,
+        next: GridParameters,
+        next_next: GridParameters,
+    ) -> Grids {
+        return Grids {
+            previous_previous: previous_previous,
+            previous: previous,
+            current: current,
+            next: next,
+            next_next: next_next,
+        };
     }
 }
 

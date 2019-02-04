@@ -1,3 +1,4 @@
+#[derive(Clone)]
 pub struct GridParameters {
     f: Vec<f64>,
     u: Vec<f64>,
@@ -20,6 +21,7 @@ impl GridParameters {
     }
 }
 
+#[derive(Clone)]
 pub struct Grids {
     previous_previous: GridParameters,
     previous: GridParameters,

@@ -10,3 +10,7 @@ include = [
     "src/lib.rs",
     "Cargo.toml",
 ]
+
+description = "This is a Cubic Interpolation Pseudo-Particle (CIP) implementation in Rust. For more information, contact mgubolin at protonmail dot com or the original article in TAKEWAKI, Hrn; NISHIGUCHI, A.; YABE, T. Cubic interpolated pseudo-particle method (CIP) for solving hyperbolic-type equations. Journal of computational physics, 1985, 61.2: 261-268. or TAKEWAKI, Hideaki; YABE, Takashi. The cubic-interpolated pseudo particle (CIP) method: application to nonlinear and multi-dimensional hyperbolic equations. Journal of Computational Physics, 1987, 70.2: 355-372."
+
+license = "GLP 3.0"

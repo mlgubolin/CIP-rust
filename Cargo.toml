@@ -4,5 +4,9 @@ version = "0.1.0"
 authors = ["mlgubolin"]
 edition = "2018"
 
-[dependencies]
-fnv = "1.0.6"
+include = [
+    "src/cip_internal.rs",
+    "src/mod.rs",
+    "src/lib.rs",
+    "Cargo.toml",
+]

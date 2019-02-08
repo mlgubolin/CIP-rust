@@ -23,11 +23,11 @@ impl GridParameters {
 
 #[derive(Clone)]
 pub struct Grids {
-    previous_previous: GridParameters,
-    previous: GridParameters,
-    current: GridParameters,
-    next: GridParameters,
-    next_next: GridParameters,
+    pub previous_previous: GridParameters,
+    pub previous: GridParameters,
+    pub current: GridParameters,
+    pub next: GridParameters,
+    pub next_next: GridParameters,
 }
 
 impl Grids {

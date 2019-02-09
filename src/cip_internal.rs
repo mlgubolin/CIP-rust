@@ -23,15 +23,15 @@ impl GridParameters {
 
 #[derive(Clone)]
 pub struct Grids {
-    pub previous_previous: GridParameters,
-    pub previous: GridParameters,
-    pub current: GridParameters,
-    pub next: GridParameters,
-    pub next_next: GridParameters,
+    previous_previous: GridParameters,
+    previous: GridParameters,
+    current: GridParameters,
+    next: GridParameters,
+    next_next: GridParameters,
 }
 
 impl Grids {
-    pub fn set_grids(
+    pub fn new(
         previous_previous: GridParameters,
         previous: GridParameters,
         current: GridParameters,
@@ -129,7 +129,7 @@ pub fn cip_initialization(mut first_grid_set: Grids) {
     let df_star = calculate_df_star(&first_grid_set, &f_star);
     let df_previous_previous = vec![0.0; first_grid_set.current.f.len()];
 
-    first_grid_set.previous.df_star = estimate_df_plus(
+    first_grid_set.previous_previous.df_star = estimate_df_plus(
         &first_grid_set.previous,
         &f_star.previous_previous,
         &f_star.previous,

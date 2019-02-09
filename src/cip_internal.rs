@@ -19,6 +19,12 @@ impl GridParameters {
             df_star: vec![],
         };
     }
+    fn set_df_star(&mut self, df_star: &Vec<f64>) {
+        for i in 0..df_star.len(){
+            self.df_star[i] = df_star[i];
+        }        
+    }
+
 }
 
 #[derive(Clone)]
@@ -71,9 +77,10 @@ impl FStar {
     }
 }
 
-pub fn cip_calculation(grids: Grids) -> Vec<f64> {
+pub fn cip_calculation(mut grids: Grids) -> Vec<f64> {
     let f_star = calculate_f_star(&grids);
     let df_star = calculate_df_star(&grids, &f_star);
+    grids.previous.set_df_star(&df_star.previous);
 
     let h_vector = h(&f_star);
     let g_vector = g(&df_star.next, &df_star.previous, &grids.current.dx);

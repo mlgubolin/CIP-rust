@@ -20,11 +20,10 @@ impl GridParameters {
         };
     }
     fn set_df_star(&mut self, df_star: &Vec<f64>) {
-        for i in 0..df_star.len(){
+        for i in 0..df_star.len() {
             self.df_star[i] = df_star[i];
-        }        
+        }
     }
-
 }
 
 #[derive(Clone)]

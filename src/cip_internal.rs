@@ -1,11 +1,11 @@
 #[derive(Clone)]
 pub struct GridParameters {
-    f: Vec<f64>,
-    u: Vec<f64>,
-    g: Vec<f64>,
-    df_star: Vec<f64>,
-    dx: f64,
-    dt: f64,
+    pub f: Vec<f64>,
+    pub u: Vec<f64>,
+    pub g: Vec<f64>,
+    pub df_star: Vec<f64>,
+    pub dx: f64,
+    pub dt: f64,
 }
 
 impl GridParameters {
@@ -28,11 +28,11 @@ impl GridParameters {
 
 #[derive(Clone)]
 pub struct Grids {
-    previous_previous: GridParameters,
-    previous: GridParameters,
-    current: GridParameters,
-    next: GridParameters,
-    next_next: GridParameters,
+    pub previous_previous: GridParameters,
+    pub previous: GridParameters,
+    pub current: GridParameters,
+    pub next: GridParameters,
+    pub next_next: GridParameters,
 }
 
 impl Grids {
